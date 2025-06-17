@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #1e293b;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+#chat-box {
+  height: 350px;
+  overflow-y: auto;
+  background: #f1f5f9;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+.message-bubble {
+  max-width: 60%;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  position: relative;
+  user-select: none;
+}
+
+.message-bubble.you { background: #dcf8c6; align-self: flex-end; }
+.message-bubble.other { background: #fff; align-self: flex-start; }
+
+.replied-text {
+  font-size: 0.85em;
+  color: #555;
+  margin-bottom: 6px;
+  padding-left: 8px;
+  border-left: 3px solid #ccc;
+}
+
+#reply-bar {
+  padding: 8px;
+  background: #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.message {
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #e2e8f0;
+  position: relative;
+  font-size: 15px;
+}
+
+.message strong {
+  color: #1e40af;
+}
+
+.admin-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-btn:hover {
+  background-color: #dc2626;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 6px;
+  color: #1a202c;
+  font-size: 15px;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}

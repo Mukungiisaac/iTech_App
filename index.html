@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iTech Studio Live Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to iTech Studio</h2>
+
+    <div id="auth-section">
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="signup()">Sign Up</button>
+      <button onclick="login()">Login</button>
+
+      <button class="google-btn" onclick="googleSignIn()">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
+        Continue with Google
+      </button>
+    </div>
+
+   <div id="chat-section" style="display:none;">
+  <h3>You're logged in as <span id="user-email"></span></h3>
+  <div id="reply-bar" style="display:none;">
+    Replying to <span id="reply-user"></span>: "<span id="reply-text"></span>"
+    <button onclick="cancelReply()">✖️</button>
+  </div>
+  <div id="chat-box"></div>
+  <textarea id="message" placeholder="Type a message..."></textarea>
+  <button onclick="sendMessage()">Send</button>
+  <button onclick="logout()">Logout</button>
+</div>
+
+  </div>
+
+  <!-- Firebase app and script -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
