@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iTech Studio Live Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div id="chat-section">
+    <h3>You're logged in as <span id="user-email"></span></h3>
+    <div id="typing-indicator" style="display: none; font-style: italic; color: gray; margin-bottom: 5px;">
+  Someone is typing...
+</div>
+
+
+    <!-- Reply bar -->
+    <div id="reply-bar" style="display:none;">
+      Replying to <span id="reply-user"></span>: "<span id="reply-text"></span>"
+      <button onclick="cancelReply()">✖️</button>
+    </div>
+<!-- Chat Box -->
+<div id="chat-box"></div>
+
+<!-- Input Area with Upload -->
+<div class="input-wrapper">
+  <textarea id="message" placeholder="Type a message..."></textarea>
+  <label for="file-upload" class="upload-icon">
+    <i class="fas fa-paperclip"></i>
+  </label>
+  <input id="file-upload" type="file" accept="image/*" />
+</div>
+
+
+    <!-- Chat Controls -->
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Firebase app and chat logic -->
+  <script type="module" src="chat.js"></script>
+</body>
+</html>

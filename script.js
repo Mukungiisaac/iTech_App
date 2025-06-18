@@ -34,6 +34,37 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
+
+
+  const textElement = document.getElementById("animated-text");
+  const messages = [
+    "Welcome to iTech Studio",
+    "We design, We develop.",
+    "The Real Chamber of Solutions.",
+    "Creativity meets technology"
+  ];
+  let index = 0;
+
+  function showNextText() {
+    // Fade out
+    textElement.classList.remove("fade-in");
+    textElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      // Change text after fade out
+      index = (index + 1) % messages.length;
+      textElement.textContent = messages[index];
+
+      // Fade in
+      textElement.classList.remove("fade-out");
+      textElement.classList.add("fade-in");
+    }, 500); // match fade-out duration
+  }
+
+  // Start the loop
+  setInterval(showNextText, 3000); // change every 3 seconds
+
+
 // 🔐 Global reply tracker
 let currentReply = null;
 
@@ -43,8 +74,8 @@ function signup() {
   const password = document.getElementById("password").value;
 
   createUserWithEmailAndPassword(auth, email, password)
-    .then(() => alert("User registered!"))
-    .catch(err => alert(err.message));
+    .then(() => alert("User registered!, Login now"))
+    .catch(err => alert('Sign Up Failed'));
 }
 
 // ✅ Login with Email
@@ -54,7 +85,7 @@ function login() {
 
   signInWithEmailAndPassword(auth, email, password)
     .then(() => showChat(auth.currentUser.email))
-    .catch(err => alert(err.message));
+    .catch(err => alert("Login Failed!"));
 }
 
 // ✅ Google Sign-In

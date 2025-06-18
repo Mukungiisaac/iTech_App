@@ -1,42 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iTech Studio Live Chat</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTech Studio</title>
+    <link rel="stylesheet" href="Assets/CSS/styles.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Welcome to iTech Studio</h2>
 
-    <div id="auth-section">
-      <input type="email" id="email" placeholder="Email" />
-      <input type="password" id="password" placeholder="Password" />
-      <button onclick="signup()">Sign Up</button>
-      <button onclick="login()">Login</button>
-
-      <button class="google-btn" onclick="googleSignIn()">
-        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
-        Continue with Google
-      </button>
+  <!-- ========= Navigation ======== -->
+   <div class="container">
+    <div class="navigation">
+        <ul>
+        <li>
+            <a href="" class="brand">
+                <span class="icon">
+                    <img src="./Assets/Imgs/My logo.png" alt="My logo">
+                </span>
+                <span class="title">iTech Studio</span>
+            </a>
+            
+            
+        </li>
+        <li>
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon></span>
+                <span class="title">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="people-outline"></ion-icon></span>
+                <span class="title">Customers</span>
+            </a>
+        </li>
+        <li>
+            <a href="./chat.html">
+                <span class="icon">
+                    <ion-icon name="chatbubble-outline"></ion-icon></span>
+                <span class="title">Live Chat</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="help-outline"></ion-icon></span>
+                <span class="title">Help</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="people-outline"></ion-icon></span>
+                <span class="title">Partnership</span>
+            </a>
+        </li>
+        <li>
+            <a href="portfolio.html">
+                <span class="icon">
+                    <ion-icon name="lock-closed-outline"></ion-icon></span>
+                <span class="title">Portfolio</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon></span>
+                <span class="title">Projects</span>
+            </a>
+        </li>
+    </ul>
     </div>
 
-   <div id="chat-section" style="display:none;">
-  <h3>You're logged in as <span id="user-email"></span></h3>
-  <div id="reply-bar" style="display:none;">
-    Replying to <span id="reply-user"></span>: "<span id="reply-text"></span>"
-    <button onclick="cancelReply()">✖️</button>
-  </div>
-  <div id="chat-box"></div>
-  <textarea id="message" placeholder="Type a message..."></textarea>
-  <button onclick="sendMessage()">Send</button>
-  <button onclick="logout()">Logout</button>
-</div>
+    <!-- ========= Main ============= -->
+     <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
 
-  </div>
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Search here...">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
 
-  <!-- Firebase app and script -->
-  <script type="module" src="script.js"></script>
+            <div class="user">
+                <img src="Assets/Imgs/izoh.jpg" alt="">
+                <h2>CEO</h2>
+    
+            </div>
+        </div>
+
+        <!-- ========== Cards ========== -->
+         <div class="cardBox">
+
+           <div class="card">
+            <div class="video"><img src="https://i.pinimg.com/736x/2b/ae/ec/2baeec21c8c3ac8633b94030b9f7685f.jpg" alt="Izooh"></div>
+        </div>
+
+           <div class="card">
+            <div class="video"><img src="https://i.pinimg.com/736x/96/8c/b4/968cb4043d63ab0f62e9f9e49a832efe.jpg" alt="Riiya"></div>
+        </div>
+
+           <div class="card">
+            <div class="video"><img src="https://i.pinimg.com/736x/db/20/76/db20763bfe94e2669804ed3c6573d309.jpg" alt="Dorow"></div>
+        </div>
+
+           <div class="card">
+            <div class="video"><img src="https://i.pinimg.com/474x/c5/28/4c/c5284ce98294a5a178b7128e3d4f6728.jpg" alt="Winslet"></div>
+        </div>
+
+         </div>
+
+         <!-- ======== Order Details ============ -->
+          <div class="details">
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>Our Services</h2>
+                    <a href="#" class="btn">View All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Service</td>
+                            <td>Tools</td>
+                            <td>Price</td>
+                            <td>Link</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Website Development</td>
+                            <td>HTML, React Js, JS & Node</td>
+                            <td>Affordable</td>
+                            <td><a href="gracedishes.co.ke" class="statuts Pending">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>UI & UX</td>
+                            <td>Figma</td>
+                            <td>Negotiable</td>
+                            <td><a href="assets/UI&UX.html" class="statuts Pending">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Graphic Design</td>
+                            <td>Photoshop & Illustrator</td>
+                            <td>Ksh 500</td>
+                            <td><a href="assets/Graphic.html" class="statuts Return">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Video Editing</td>
+                            <td>Wondershare Filmora</td>
+                            <td>Negotiable</td>
+                            <td><a href="#" class="statuts Pending">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Data Science</td>
+                            <td>Python</td>
+                            <td>Negotiable</td>
+                            <td><a href="#" class="statuts Pending">Visit</a></td>
+                        </tr>
+                        <tr>
+                            <td>ML Projects</td>
+                            <td>Python & TensorFlow</td>
+                            <td>Affordable</td>
+                            <td><a href="#" class="statuts Pending">Visit</a></td>
+                        </tr><br><br>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============ New Customers=============== -->
+            <div class="recentCustomers">
+                <div class="cardHeader">
+                    <h2>Recent Clients</h2>
+                </div>
+                <table>
+                    <tr>
+                        <td width = "60px">
+                            <div class="imgBx"><img src="assets/Imgs/Customer Izooh.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Isaac <br> <span>Mwingi</span></h4>
+                    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width = "60px">
+                            <div class="imgBx"><img src="assets/Imgs/King p.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Peter <br> <span>Kiambu</span></h4>
+                    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width = "60px">
+                            <div class="imgBx"><img src="assets/Imgs/Dorow.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Dorow <br> <span>Meru</span></h4>
+                    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width = "60px">
+                            <div class="imgBx"><img src="assets/Imgs/Sarah.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Riiya <br> <span>Nakuru</span></h4>
+                    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width = "60px">
+                            <div class="imgBx"><img src="assets/Imgs/Win.jpg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Winslet <br> <span>Meru</span></h4>
+                    
+                        </td>
+                    </tr>
+                </table>
+
+            </div> 
+          </div>
+<br>
+          <section class="AboutUs">
+            <h1> <span>About</span> Us😊</h1><br><br>
+            <p>iTech Studio is a creative digital agency specializing in graphic design, web development, UI/UX design, and video editing. We craft visually engaging, user-focused solutions that help brands stand out and connect with their audience. <br><br>From logos to websites and digital content, we bring your ideas to life with creativity and precision.</p>
+
+            <div class="myCards">
+                <div class="mainCards"><img src="https://i.pinimg.com/736x/97/e8/dd/97e8ddb09a792b66c7853a9fa8c92806.jpg" alt=""></div>
+                <div class="mainCards"><img src="https://i.pinimg.com/736x/2a/22/92/2a2292adb67fa95af9914149763fa0cf.jpg" alt=""></div>
+                <div class="mainCards"><img src="https://i.pinimg.com/736x/e0/94/29/e09429452fb0a5a7797035c98e41d410.jpg" alt=""></div>
+            </div>
+          </section>
+
+          
+                <div class="me">
+                    <div class="Why">
+                        <h1>Why <span>Choose</span> Us?</h1><br>
+                        <p>At iTech Studio, we are dedicated to turning ideas into impactful digital experiences. Our clients choose us because we deliver <b>creative and modern designs</b> that are both visually appealing and user-friendly. As an all-in-one tech and design hub, we offer a wide range of services including <i></i><b>web development, UI/UX design, graphic design, branding, and video editing</b></i> — all under one roof. Our skilled and passionate team brings expertise and creativity to every project, ensuring high-quality results tailored to your vision. We take a user-centric approach, building responsive solutions that work seamlessly across all devices. With a strong focus on reliable and transparent collaboration, we maintain open communication, meet deadlines, and exceed expectations. At the core of our work is a balance between innovation and functionality, allowing us to create solutions that not only stand out but also drive real results.</p>
+                    </div>
+                    <img src="Assets/Imgs/Chamber.png" alt="">
+                </div>
+
+     </div>
+    </div>
+
+    <!-- ========== Footer ========= -->
+    <footer id="smartFooter"   class="footer">
+        <div class="container">
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+          </div>
+          <p>&copy; 2025 iTech Studio. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <script type="module" src="check-auth.js"></script>
+
+
+   <!-- ======== Main Js ======= -->
+     <script src="../Assets/Js/main.js"></script>
+
+   <!-- =========== Icons link ========== -->
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
